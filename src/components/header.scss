@@ -1,0 +1,112 @@
+@import "../utils/cssConfig.scss";
+
+$header_h: 100px;
+$logo_h: 40px;
+
+
+.app_header {
+  color: white;
+  height: $header_h;
+  margin: 0 auto;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  font-family: $main_f;
+  background-color: $white_c;
+  z-index: 1000;
+  .header_block{
+    max-width: $app_max_w;
+    margin: 0 auto;
+    padding: 0px $app_s*2;
+    color: $black_c;
+    height: 100%;
+    h2{
+      line-height: $header_h;
+      display: inline-block;
+      font-size: 22px;
+      color: $black_c;
+      margin: 0px;
+    }
+    img{
+      max-height: $logo_h;
+      margin-right: $app_s/2;
+      margin-top: -6px;
+    }
+    .menu_block{
+      display: inline-block;
+      float: right;
+      font-size: 17px;
+    }
+  }
+}
+
+.menu{
+  display: inline-block;
+  float: right;
+  font-size: 17px;
+  a:last-child .menuItem{
+    margin-right: 0px;
+  }
+  .menuItem{
+    display: inline-block;
+    margin: 0px $app_s/2;
+    line-height: $header_h;
+    color: $black_c;
+    max-width: 200px;
+    overflow: hidden;
+    white-space:nowrap;
+    text-overflow: ellipsis;
+    &:hover{
+      color: $lightMain_c;
+      box-shadow: 0px -7px 8px -9px $lightMain_c inset;
+    }
+  }
+  @include mobileWidth {
+    display: none;
+  }
+}
+
+.menu_mobile_btn_wrapper{
+  display: none;
+  @include mobileWidth {
+    display: block;
+    .glyphicon{
+      line-height: $header_h;
+      cursor: pointer;
+      font-size: 36px;
+      &:hover{
+        text-shadow: 0px 0px 10px $lightBlue_c;
+      }
+    }
+    .menu_mobile_btn-act{
+      color: $lightMain_c;
+    }
+  }
+}
+
+.menu_mobild_list{
+  display: none;
+  @include mobileWidth {
+    display: block;
+    z-index: 10000;
+    position: relative;
+    .menuItem{
+      background-color: $menuGray_c;
+      padding: $app_s $app_s*2;
+      font-size: 18px;
+      color: #fff;
+      z-index: 1000;
+    position: relative;
+      &:hover{
+        background-color: $menuGray_hover_c;
+        text-shadow: 0px 0px 10px $lightBlue_c;
+      }
+    }
+    a:hover{
+      text-decoration: none;
+    }
+  }
+}
+
+
+
