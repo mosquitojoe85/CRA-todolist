@@ -1,9 +1,7 @@
 import React from 'react';
 import logo from '../assets/logo.svg';
-// import './App.css';
 import './App.scss';
 
-// class App extends Component {
 const App = () => (
   <div className="App">
     <div className="App-header">
