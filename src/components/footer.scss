@@ -1,4 +1,4 @@
-@import "../utils/cssConfig.scss";
+@import "../utils/_style.scss";
 
 $header_h: 100px;
 
@@ -6,9 +6,6 @@ $header_h: 100px;
   height: $header_h;
   text-align: center;
   background-color: $lightGray_c;
-  // position: absolute;
-  // bottom: 0px;
-  // width: 100%;
   .footer_block{
     margin: 0 auto;
     max-width: $app_max_w;
@@ -21,32 +18,6 @@ $header_h: 100px;
       @include mobileWidth{
         line-height: 100%;
         margin-top: $app_s*2;
-      }
-    }
-    .intl_block{
-      height: 100%;
-      line-height: $header_h;
-      padding-right: $app_s*2;
-      display: inline-block;
-      position: absolute;
-      right: 0px;
-      @include mobileWidth{
-        position: relative;
-        width: 100%;
-        line-height: $header_h/2;
-      }
-      select{
-        width: 100px;
-        overflow: hidden;
-        border-color: $lightMain_c;
-        background-color: $white_c;
-        height: 30px;
-        // -moz-appearance: none;
-        // text-indent: 0.01px;
-        // text-overflow:'';
-        &:hover{
-          box-shadow: 0px 0px 9px 0px $lightBlue_c;
-        }
       }
     }
   }

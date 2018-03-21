@@ -5,7 +5,7 @@ import { Switch } from 'react-router';
 import { Provider } from 'react-redux';
 
 import App from './routes/App';
-import './index.css';
+import './index.scss';
 import store from './models/store';
 
 ReactDOM.render(

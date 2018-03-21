@@ -1,14 +1,11 @@
-@import "../utils/cssConfig.scss";
+@import "../utils/_style.scss";
 
 $header_h: 100px;
-$logo_h: 40px;
-
 
 .app_header {
   color: white;
   height: $header_h;
   margin: 0 auto;
-  position: fixed;
   top: 0px;
   width: 100%;
   font-family: $main_f;
@@ -20,17 +17,15 @@ $logo_h: 40px;
     padding: 0px $app_s*2;
     color: $black_c;
     height: 100%;
+    a{
+      float: left;
+      text-decoration: none;
+    }
     h2{
       line-height: $header_h;
-      display: inline-block;
       font-size: 22px;
       color: $black_c;
       margin: 0px;
-    }
-    img{
-      max-height: $logo_h;
-      margin-right: $app_s/2;
-      margin-top: -6px;
     }
     .menu_block{
       display: inline-block;
@@ -57,8 +52,8 @@ $logo_h: 40px;
     white-space:nowrap;
     text-overflow: ellipsis;
     &:hover{
-      color: $lightMain_c;
-      box-shadow: 0px -7px 8px -9px $lightMain_c inset;
+      color: $main_c;
+      box-shadow: 0px -7px 8px -9px $main_c inset;
     }
   }
   @include mobileWidth {
@@ -70,17 +65,8 @@ $logo_h: 40px;
   display: none;
   @include mobileWidth {
     display: block;
-    .glyphicon{
-      line-height: $header_h;
-      cursor: pointer;
-      font-size: 36px;
-      &:hover{
-        text-shadow: 0px 0px 10px $lightBlue_c;
-      }
-    }
-    .menu_mobile_btn-act{
-      color: $lightMain_c;
-    }
+    line-height: $header_h;
+    cursor: pointer;
   }
 }
 
@@ -91,15 +77,15 @@ $logo_h: 40px;
     z-index: 10000;
     position: relative;
     .menuItem{
-      background-color: $menuGray_c;
+      background-color: $black_opacity7_c;
       padding: $app_s $app_s*2;
       font-size: 18px;
       color: #fff;
       z-index: 1000;
     position: relative;
       &:hover{
-        background-color: $menuGray_hover_c;
-        text-shadow: 0px 0px 10px $lightBlue_c;
+        background-color: $black_opacity9_c;
+        text-shadow: 0px 0px 10px $main_c;
       }
     }
     a:hover{

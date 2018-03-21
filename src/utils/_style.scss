@@ -1,0 +1,20 @@
+$main_c: #0069b3;
+$text_c: #4a4a4a;
+$white_c: #fff;
+$black_c: #333;
+$gray_c: #bbb;
+$lightGray_c: #eee;
+$menuGray_c: #6a6a6a;
+$menuGray_hover_c: #464646;
+$app_s: 12px;
+$black_opacity9_c: rgba($black_c, 0.9);
+$black_opacity7_c: rgba($black_c, 0.7);
+
+$main_f: "Microsoft JhengHei", "Arial", sans-serif; // Microsoft JhengHei 微軟正黑體
+
+$app_max_w: 1200px;
+$app_mobile_w: 1100px;
+
+@mixin mobileWidth() {
+  @media all and (max-width: $app_mobile_w) { @content; }
+}

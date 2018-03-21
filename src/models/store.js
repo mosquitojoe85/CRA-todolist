@@ -1,9 +1,7 @@
 import { combineReducers, createStore } from 'redux';
-import { lobbyBoard } from './reducers/board';
 import regList from './reducers/register';
 
 const reducer = combineReducers({
-  lobbyBoard,
   regList
 });
 const store = createStore(
@@ -11,7 +9,7 @@ const store = createStore(
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
 
-// 透過store.subscribe，偵聽store變化記錄log
+// 偵聽store
 // store.subscribe(() => {
 //   console.log(store.getState());
 // });
