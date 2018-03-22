@@ -1,0 +1,35 @@
+@import "../utils/_style.scss";
+
+.todoItem{
+  padding: $app_s*2;
+  margin-top: $app_s;
+  border: solid 1px $gray_c;
+  border-radius: 4px;
+  overflow: auto;
+  font-size: 16px;
+  position: relative;
+  &:hover{
+    box-shadow: 0px 0px 8px -2px $main_c;
+  }
+  .doneBtn{
+    font-size: 14px;
+    position: absolute;
+    border: solid 1px $gray_c;
+    border-radius: 4px;
+    width: 60px;
+    top: $app_s;
+    right: $app_s;
+    height: 30px;
+    &:hover{
+      background-color: $main_c;
+      color: $white_c;
+    }
+  }
+  & > p{
+    margin-right: 60px + $app_s;
+  }
+
+}
+
+
+

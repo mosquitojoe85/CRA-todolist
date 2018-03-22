@@ -1,26 +1,31 @@
+/* eslint-disable */
 import React from 'react';
 import { connect } from 'react-redux';
 
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import logo from '../assets/logo.svg';
 import './App.scss';
 import { saveRegList } from '../models/actions/register';
+import TodoItem from '../components/TodoItem';
 
 
 const App = ({ dispatch }) => (
-  <div className="App">
+  <div>
     <Header />
-    <div className="App-header">
-      <img src={logo} className="App-logo" alt="logo" />
-      <h2>Welcome to React</h2>
+    <div className="body_block">
+      <div className="todo_block">
+        <div className="input_block">
+          <div>
+            <input />
+          </div>
+          <button onClick={() => dispatch(saveRegList([]))} >Add</button>
+        </div>
+        <div className="list_block">
+          <TodoItem done={false} desc={"00000000001000"} />
+          <TodoItem done={true} desc={"從前有一個倉庫你知道，有一天你知道，放了一隻貓，老鼠都不敢動。到年底的時候喔，倉庫就多了很多糧食。"} />
+        </div>
+      </div>
     </div>
-    <p className="App-intro">
-      To get started, edit <code>src/App.js</code> and save to reload.
-    </p>
-    <button onClick={() => dispatch(saveRegList([]))}>
-      0000
-    </button>
     <Footer />
   </div>
 );

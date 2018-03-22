@@ -4,11 +4,15 @@ body {
   font-family: "Microsoft JhengHei", "Arial", sans-serif;
 }
 
-div{
+div, input{
   box-sizing: border-box;
 }
 
 h1, h2, h3, p{
   margin: 0px;
   padding: 0px;
+}
+
+button{
+  cursor: pointer;
 }
