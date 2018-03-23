@@ -1,8 +1,8 @@
 import { combineReducers, createStore } from 'redux';
-import regList from './reducers/register';
+import todoList from './reducers/todo';
 
 const reducer = combineReducers({
-  regList
+  todoList
 });
 const store = createStore(
   reducer,

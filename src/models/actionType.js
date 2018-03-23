@@ -1,2 +1,2 @@
-export const GET_REG_LIST = 'GET_REG_LIST';
-export const CANCEL_REG = 'CANCEL_REG';
+export const ADD_TODO = 'ADD_TODO';
+export const CHANGE_STATUS = 'CHANGE_STATUS';

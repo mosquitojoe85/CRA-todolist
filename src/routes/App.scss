@@ -37,10 +37,20 @@ $input_h: 40px;
           color: $white_c;
         }
       }
+      .disabledBtn{
+        cursor: default;
+        color: $gray_c;
+        &:hover{
+          background-color: initial;
+          color: $gray_c;
+        }
+      }
     }
     .list_block{
       margin-top: $app_s*2;
-
     }
   }
 }
+
+
+

@@ -1,13 +1,21 @@
-/* eslint-disable */
 import React from 'react';
+import classNames from 'classnames';
+
 
 import './todoItem.scss';
 
-function TodoItem({ done, desc }) {
+function TodoItem({
+  done, desc, id, handleStatus
+}) {
   return (
     <div className="todoItem" >
-      <p>{desc}</p>
-      <button className="doneBtn">{done ? "Undo" : "Done"}</button>
+      <p className={classNames({ doneDesc: done })}>{desc}</p>
+      <button
+        className={classNames({ doneBtn: !done, undoBtn: done })}
+        onClick={() => handleStatus(id)}
+      >
+        {done ? 'Undo' : 'Done'}
+      </button>
     </div>
   );
 }

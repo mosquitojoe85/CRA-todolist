@@ -11,7 +11,11 @@
   &:hover{
     box-shadow: 0px 0px 8px -2px $main_c;
   }
-  .doneBtn{
+  .doneDesc{
+    text-decoration: line-through;
+    color: $gray_c;
+  }
+  .doneBtn, .undoBtn{
     font-size: 14px;
     position: absolute;
     border: solid 1px $gray_c;
@@ -21,14 +25,18 @@
     right: $app_s;
     height: 30px;
     &:hover{
-      background-color: $main_c;
       color: $white_c;
     }
+  }
+  .doneBtn:hover{
+    background-color: $green_c;
+  }
+  .undoBtn:hover{
+    background-color: $red_c;
   }
   & > p{
     margin-right: 60px + $app_s;
   }
-
 }
 
 

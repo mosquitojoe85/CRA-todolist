@@ -1,33 +1,61 @@
-/* eslint-disable */
 import React from 'react';
 import { connect } from 'react-redux';
+import classNames from 'classnames';
+import { say } from 'cowsay';
 
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import './App.scss';
-import { saveRegList } from '../models/actions/register';
+import { addTodo, changeStatus } from '../models/actions/todo';
 import TodoItem from '../components/TodoItem';
 
+console.log(say({ text: 'It\'s a new round' }));
 
-const App = ({ dispatch }) => (
-  <div>
-    <Header />
-    <div className="body_block">
-      <div className="todo_block">
-        <div className="input_block">
-          <div>
-            <input />
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { value: '' };
+    this.handleAddTodo = this.handleAddTodo.bind(this);
+  }
+
+  handleAddTodo() {
+    this.props.dispatch(addTodo(this.state.value));
+    this.setState({ value: '' });
+  }
+
+  render() {
+    const { dispatch, todoList } = this.props;
+    const { value } = this.state;
+    return (
+      <div>
+        <Header />
+        <div className="body_block">
+          <div className="todo_block">
+            <div className="input_block">
+              <div>
+                <input value={value} onChange={e => this.setState({ value: e.target.value })} />
+              </div>
+              <button className={classNames({ disabledBtn: !value })} disabled={!value} onClick={this.handleAddTodo}>
+                Add
+              </button>
+            </div>
+            <div className="list_block">
+              {todoList.map(item => (
+                <TodoItem
+                  done={item.done}
+                  desc={item.desc}
+                  key={item.id}
+                  id={item.id}
+                  handleStatus={id => dispatch(changeStatus(id))}
+                />))
+              }
+            </div>
           </div>
-          <button onClick={() => dispatch(saveRegList([]))} >Add</button>
         </div>
-        <div className="list_block">
-          <TodoItem done={false} desc={"00000000001000"} />
-          <TodoItem done={true} desc={"從前有一個倉庫你知道，有一天你知道，放了一隻貓，老鼠都不敢動。到年底的時候喔，倉庫就多了很多糧食。"} />
-        </div>
+        <Footer />
       </div>
-    </div>
-    <Footer />
-  </div>
-);
+    );
+  }
+}
 
-export default connect()(App);
+export default connect(({ todoList }) => ({ todoList }))(App);

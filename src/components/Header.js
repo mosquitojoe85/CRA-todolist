@@ -39,7 +39,7 @@ class MenuBar extends React.Component {
       <div className="app_header" style={style}>
         <div className="header_block">
           <Link to="/">
-            <h2>React App</h2>
+            <h2>Todo App</h2>
           </Link>
           <div className="menu_block">
             {/* PC */}
