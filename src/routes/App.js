@@ -9,6 +9,7 @@ import './App.scss';
 import { addTodo, changeStatus } from '../models/actions/todo';
 import TodoItem from '../components/TodoItem';
 
+// eslint-disable-next-line
 console.log(say({ text: 'It\'s a new round' }));
 
 class App extends React.Component {
