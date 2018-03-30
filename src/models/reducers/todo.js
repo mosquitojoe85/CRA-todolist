@@ -4,9 +4,9 @@ const defaultValue = {
   todoList: [
     { id: 1, done: true, desc: '從前有一個倉庫你知道，有一天你知道，放了一隻貓，老鼠都不敢動。到年底的時候喔，倉庫就多了很多糧食。' },
     { id: 2, done: false, desc: '把Webpack筆記整理後放上Github。' },
-    { id: 2, done: false, desc: 'RWD未完成。' },
-    { id: 2, done: false, desc: '增加移除todo功能。' },
-    { id: 2, done: false, desc: '增加標題與內文，以及收合內文功能。' }
+    { id: 3, done: false, desc: 'RWD未完成。' },
+    { id: 4, done: false, desc: '增加移除todo功能。' },
+    { id: 5, done: false, desc: '增加標題與內文，以及收合內文功能。' }
   ]
 };
 
